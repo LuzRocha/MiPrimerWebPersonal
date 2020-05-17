@@ -1,10 +1,26 @@
+
 {% extends 'core/base.html' %}
 
 {% block tittle %}Acerca de{% endblock %}
 
-{% block content %}
-<h2>Acerca de</h2>
+{%block background%}{% load static %}{% static 'core/img/about-bg.jpg'%}{% endblock %} 
 
-
-<p>Me llamo luz y soy programadora</p)
+ {% block headers %}
+  <h1>Acerca de</h1>
+              <span class="subheading">Biografía</span>
 {% endblock %}
+
+
+{% block content %}
+ <div class="row">  
+      <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" src="{% static 'core/img/avatar.jpg'%}" alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">Luz Roche</h2>   
+    <p>Nacida en Huamantla , Tlaxcala, Tiene 22 años y Estudia en la Universidad Tecnologica de Tlaxcala.
+    en la carrera de Tecnologias de la informacion y comunicacion</p>
+    </div>
+</div>
+{% endblock %}
+
